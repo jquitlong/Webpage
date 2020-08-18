@@ -1,0 +1,31 @@
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<form class="login100-form validate-form">
+				<span class="login100-form-title p-b-43">
+					Get Started
+				</span>
+
+				{{#if successMessage}}
+                    {{alert-message alertStyle="success" message=successMessage}}
+				{{else if errorMessage}}
+                    {{alert-message alertStyle="danger" message=errorMessage}}
+				{{/if}}
+
+                <br>
+
+				{{login/login-form changeset=(changeset credentials LoginValidation) onSubmit=(action "login") onSignUp=(action "sign_up")}}
+
+				<div class="text-center p-t-46 p-b-20">
+					<span class="txt2">
+						<p class="footer-company-name">All Rights Reserved. &copy; 2020
+							Take Home Exam</p>
+					</span>
+				</div>
+			</form>
+
+			<div class="login100-more" style="background-image: url('{{rootURL}}assets/media/photos/exam_bg.jpeg');">
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+{{main/main-tpl/main-content/main-content-header title=""}} 
+<div class="content" style="padding-left: 15%; padding-right:15%;">
+    <button type="button" class="btn-block-option" style="background-color: #998f90; color:white;" >
+        Step 1
+    </button>
+    <button type="button" class="btn-block-option" style="background-color: #998f90; color:white;" >
+        Step 2
+    </button>
+    <button type="button" class="btn-block-option" style="background-color: #9B141B; color:white;" >
+        Step 3
+    </button>
+    <button type="button" class="btn-block-option" style="background-color: #998f90; color:white;" >
+        Step 4
+    </button>
+
+    <br>
+    <hr>
+    
+    <div class="row">
+        <div class="col">
+            <h3>Location Information</h3>
+            <br>
+            <div class="wrap-input100" style="backgroud-color: #998f90">
+                <input
+                    class="input100 input-no-border"
+                    type="textfield"
+                    value={{userInfo.address}}
+                    onchange={{action (mut userInfo.address) value="target.value"}}
+                    placeholder="Permanent Address">
+                <span class="focus-input100">&emsp;Permanent Address</span>
+            </div>
+
+            <div class="container-login100-form-btn">
+                <button {{action "onSave" userInfo}} class="login100-form-btn">
+                    Save and Proceed
+                </button>
+                <button {{action "onBack"}} class="login100-form-btn">
+                    Return to Step 2
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

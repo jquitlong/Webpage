@@ -1,0 +1,11 @@
+{{#if (has-block)}}
+  {{yield
+    (hash
+      header=(component "main/main-tpl/main-header")
+      content=(component "main/main-tpl/main-content")
+      footer=(component "main/main-tpl/main-footer")
+    )
+  }}
+{{else}}
+  {{outlet}}
+{{/if}}

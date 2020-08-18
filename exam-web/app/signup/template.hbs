@@ -1,0 +1,53 @@
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<form class="login100-form validate-form">
+				<span class="login100-form-title p-b-43">
+					Create Account
+				</span>
+
+				{{#if successMessage}}
+                    {{alert-message alertStyle="success" message=successMessage}}
+				{{else if errorMessage}}
+                    {{alert-message alertStyle="danger" message=errorMessage}}
+				{{/if}}
+
+                <br>
+                <div class="wrap-input100">
+                    <input
+                        class="input100 input-no-border"
+                        type="text"
+                        value={{credentials.username}}
+                        onchange={{action (mut credentials.username) value="target.value"}}
+                        placeholder="Username">
+                    <span class="focus-input100">&emsp;Username</span>
+                </div>
+
+                <div class="wrap-input100">
+                    <input
+                        class="input100 input-no-border"
+                        type="password"
+                        value={{credentials.password}}
+                        onchange={{action (mut credentials.password) value="target.value"}}
+                        placeholder="Password">
+                    <span class="focus-input100">&emsp;Password</span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button {{action "signup" credentials}} class="login100-form-btn">
+                        Create Account
+                    </button>
+                </div>
+
+                <div class="flex-sb-m w-full pt-5 text-center">
+                    <a href="#" class="txt1" {{action "login"}}>
+                        <u>Already have an account? Log In</u>
+                    </a>
+                </div>
+			</form>
+
+			<div class="login100-more" style="background-image: url('{{rootURL}}assets/media/photos/exam_bg.jpeg');">
+			</div>
+		</div>
+	</div>
+</div>

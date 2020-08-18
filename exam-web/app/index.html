@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ExamWeb</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" id="css-main" href="{{rootURL}}assets/css/oneui.min.css">
+    <link rel="stylesheet" id="css-theme" href="{{rootURL}}assets/css/themes/flat.min.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/exam-web.css">
+    <link rel="stylesheet" type="text/css" href="{{rootURL}}assets/css/exam.css">
+    <link rel="stylesheet" type="text/css" href="{{rootURL}}assets/fonts/exam/flaticon.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    
+    {{content-for "body"}}
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/exam-web.js"></script>
+    <script src="{{rootURL}}assets/js/oneui.core.min.js"></script>
+    <script src="{{rootURL}}assets/js/oneui.app.min.js"></script>
+    <script src="{{rootURL}}assets/js/plugins/jquery-bootstrap-wizard/bs4/jquery.bootstrap.wizard.min.js"></script>
+    <script src="{{rootURL}}assets/js/plugins/jquery.bootstrap-duallistbox.min.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>
